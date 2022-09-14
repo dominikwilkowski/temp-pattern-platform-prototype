@@ -5,6 +5,8 @@ import { Badge } from '../../components/Badge';
 import { data } from '../../db';
 
 export default function PatternPage({ data: { image, name } }) {
+	const basePath = process.env.NEXT_PUBLIC_LIVE_SITE ? '/temp-pattern-platform-prototype' : '';
+
 	return (
 		<Layout>
 			<div css={{ margin: '0 0 2rem 0' }}>
@@ -20,7 +22,7 @@ export default function PatternPage({ data: { image, name } }) {
 				}}
 			>
 				<img
-					src={`/img/${image}`}
+					src={`${basePath}/img/${image}`}
 					css={{
 						display: 'block',
 						maxWidth: '100%',

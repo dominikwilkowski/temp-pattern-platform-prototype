@@ -8,6 +8,7 @@ import { data } from '../db';
 
 export default function Home({ data }) {
 	const [filterTag, setFilterTag] = useState('all');
+	const basePath = process.env.NEXT_PUBLIC_LIVE_SITE ? '/temp-pattern-platform-prototype' : '';
 
 	return (
 		<Layout>
@@ -92,7 +93,7 @@ export default function Home({ data }) {
 							<Link href={`/pattern/${url}`}>
 								<a>
 									<img
-										src={`/img/${image}`}
+										src={`${basePath}/img/${image}`}
 										css={{
 											display: 'block',
 											maxWidth: '100%',
