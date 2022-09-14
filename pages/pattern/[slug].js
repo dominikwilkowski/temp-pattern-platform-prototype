@@ -4,7 +4,7 @@ import { Layout } from '../../components/Layout';
 import { Badge } from '../../components/Badge';
 import { data } from '../../db';
 
-export default function PatternPage({ data: { image, name } }) {
+export default function PatternPage({ data: { image, name, tag, maturity } }) {
 	const basePath = process.env.NEXT_PUBLIC_LIVE_SITE ? '/temp-pattern-platform-prototype' : '';
 
 	return (
@@ -30,9 +30,41 @@ export default function PatternPage({ data: { image, name } }) {
 				/>
 				<h2>
 					{name}
-					<Badge maturity="2" css={{ marginLeft: '0.5rem' }} />
+					<Badge maturity={maturity} css={{ marginLeft: '0.5rem' }} />
 				</h2>
-
+				Tag{tag.length > 1 ? 's' : ''}:
+				<ul
+					css={{
+						display: 'inline-block',
+						listStyle: 'none',
+						padding: 0,
+						margin: 0,
+					}}
+				>
+					{tag.map((thisTag) => (
+						<li
+							key={thisTag}
+							css={{
+								display: 'inline-block',
+								margin: '0 0.25rem',
+							}}
+						>
+							<span
+								css={{
+									fontSize: '0.8125rem',
+									fontWeight: 400,
+									borderRadius: '.25rem',
+									overflow: 'hidden',
+									padding: '2px 8px',
+									lineHeight: 0,
+									background: 'rgb(228, 229, 231)',
+								}}
+							>
+								{thisTag}
+							</span>
+						</li>
+					))}
+				</ul>
 				<h3>Pattern guidance</h3>
 				<p>
 					Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
@@ -43,7 +75,6 @@ export default function PatternPage({ data: { image, name } }) {
 					orci phasellus egestas. A erat nam at lectus urna duis convallis convallis tellus. Pretium fusce id velit ut
 					tortor pretium.
 				</p>
-
 				<ul
 					css={{
 						listStyle: 'none',
@@ -134,7 +165,6 @@ export default function PatternPage({ data: { image, name } }) {
 						</p>
 					</li>
 				</ul>
-
 				<p>
 					Leo vel orci porta non pulvinar neque laoreet suspendisse. Dui accumsan sit amet nulla facilisi morbi. Quis
 					auctor elit sed vulputate mi sit amet mauris. In nisl nisi scelerisque eu ultrices vitae. Eget arcu dictum
@@ -144,7 +174,6 @@ export default function PatternPage({ data: { image, name } }) {
 					neque laoreet. Lorem ipsum dolor sit amet consectetur adipiscing elit pellentesque. Mauris vitae ultricies leo
 					integer malesuada. Ac auctor augue mauris augue neque. Ipsum consequat nisl vel pretium lectus quam id leo.
 				</p>
-
 				<p>
 					Eget nullam non nisi est sit amet. Euismod nisi porta lorem mollis aliquam ut porttitor leo. Pharetra sit amet
 					aliquam id diam. Donec et odio pellentesque diam volutpat commodo sed egestas. Semper viverra nam libero justo
@@ -154,7 +183,6 @@ export default function PatternPage({ data: { image, name } }) {
 					leo vel orci porta non pulvinar. Quisque sagittis purus sit amet volutpat consequat mauris nunc. Viverra
 					accumsan in nisl nisi scelerisque eu ultrices.
 				</p>
-
 				<p>
 					Consectetur libero id faucibus nisl tincidunt eget nullam non nisi. Arcu non sodales neque sodales ut etiam
 					sit amet. Vulputate dignissim suspendisse in est ante in nibh mauris cursus. Quis varius quam quisque id diam
@@ -164,7 +192,6 @@ export default function PatternPage({ data: { image, name } }) {
 					Ipsum a arcu cursus vitae congue mauris rhoncus aenean. In fermentum posuere urna nec tincidunt praesent
 					semper feugiat. Semper feugiat nibh sed pulvinar proin gravida hendrerit.
 				</p>
-
 				<p>
 					Suspendisse in est ante in nibh. Nulla posuere sollicitudin aliquam ultrices sagittis. Hendrerit dolor magna
 					eget est. Erat pellentesque adipiscing commodo elit at imperdiet dui accumsan sit. Ultricies leo integer
