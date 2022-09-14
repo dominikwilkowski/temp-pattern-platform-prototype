@@ -13,7 +13,7 @@ export default function Home({ data }) {
 	return (
 		<Layout>
 			<form
-				action="/new-pattern"
+				action={`${basePath}/new-pattern`}
 				method="POST"
 				css={{
 					display: 'grid',
