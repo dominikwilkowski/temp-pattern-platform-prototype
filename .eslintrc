@@ -17,6 +17,7 @@
 				argsIgnorePattern: '_'
 			}
 		],
+		'react/display-name': 'off',
 		'react/prop-types': 0
 	},
 	extends: [
