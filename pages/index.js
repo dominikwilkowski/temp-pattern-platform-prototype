@@ -14,7 +14,7 @@ export default function Home({ data }) {
 		<Layout>
 			<form
 				action={`${basePath}/new-pattern`}
-				method="POST"
+				method="GET"
 				css={{
 					display: 'grid',
 					gridTemplateColumns: '1fr auto',
@@ -35,7 +35,7 @@ export default function Home({ data }) {
 					}}
 				>
 					Submit a new pattern:
-					<Input placeholder="Enter Figma, codesandbox or playroom URL" />
+					<Input name="url" placeholder="Enter Figma, codesandbox or playroom URL" />
 				</label>
 				<Button type="submit">Submit</Button>
 			</form>
