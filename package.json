@@ -10,6 +10,7 @@
 		"test": "yarn test:prettier && yarn test:eslint",
 		"dev": "next dev",
 		"build": "next build",
+		"export": "next export",
 		"start": "next start",
 		"lint": "next lint",
 		"nuke": "rm -rf node_modules && rm -rf .next rm -rf out && rm yarn.lock"
