@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import Avatar from 'avataaars';
 
 import { Layout } from '../../components/Layout';
 import { Badge } from '../../components/Badge';
@@ -65,6 +66,118 @@ export default function PatternPage({ data: { image, name, tag, maturity } }) {
 						</li>
 					))}
 				</ul>
+				<br />
+				Last tweaked by:
+				<div
+					css={{
+						position: 'relative',
+						height: '3px',
+						overflow: 'visible',
+						background: 'gray',
+						margin: '2rem 0',
+						svg: {
+							width: '2rem',
+							height: '2rem',
+							marginTop: '-1rem',
+						},
+					}}
+				>
+					<Avatar
+						avatarStyle="Circle"
+						topType="LongHairFrida"
+						accessoriesType="Sunglasses"
+						facialHairType="MoustacheMagnum"
+						facialHairColor="BrownDark"
+						clotheType="ShirtScoopNeck"
+						clotheColor="Gray01"
+						eyeType="Squint"
+						eyebrowType="UnibrowNatural"
+						mouthType="Vomit"
+						skinColor="Black"
+						css={{ marginLeft: '10%' }}
+					/>
+					<Avatar
+						avatarStyle="Circle"
+						topType="LongHairBob"
+						accessoriesType="Prescription02"
+						hairColor="Black"
+						facialHairType="Blank"
+						facialHairColor="Blonde"
+						clotheType="BlazerShirt"
+						eyeType="Side"
+						eyebrowType="SadConcerned"
+						mouthType="Eating"
+						skinColor="Pale"
+						css={{ marginLeft: '23%' }}
+					/>
+					<Avatar
+						avatarStyle="Circle"
+						topType="Turban"
+						accessoriesType="Round"
+						hatColor="Blue03"
+						facialHairType="MoustacheMagnum"
+						facialHairColor="BlondeGolden"
+						clotheType="CollarSweater"
+						clotheColor="PastelGreen"
+						eyeType="Hearts"
+						eyebrowType="Default"
+						mouthType="Disbelief"
+						skinColor="Pale"
+						css={{ marginLeft: '5%' }}
+					/>
+					<Avatar
+						avatarStyle="Circle"
+						topType="LongHairMiaWallace"
+						accessoriesType="Prescription02"
+						hatColor="PastelRed"
+						hairColor="Platinum"
+						facialHairType="Blank"
+						facialHairColor="Black"
+						clotheType="Overall"
+						clotheColor="Red"
+						eyeType="Surprised"
+						eyebrowType="RaisedExcitedNatural"
+						mouthType="Serious"
+						skinColor="Pale"
+						css={{ marginLeft: '40%' }}
+					/>
+				</div>
+				<br />
+				Stackholders:
+				<Avatar
+					avatarStyle="Circle"
+					topType="ShortHairDreads02"
+					accessoriesType="Round"
+					hairColor="Black"
+					facialHairType="MoustacheMagnum"
+					facialHairColor="BlondeGolden"
+					clotheType="ShirtVNeck"
+					clotheColor="White"
+					eyeType="Squint"
+					eyebrowType="UnibrowNatural"
+					mouthType="Default"
+					skinColor="Yellow"
+					css={{ width: '2rem', height: '2rem' }}
+				/>
+				<Avatar
+					avatarStyle="Circle"
+					topType="LongHairShavedSides"
+					accessoriesType="Round"
+					facialHairType="Blank"
+					clotheType="CollarSweater"
+					clotheColor="PastelBlue"
+					eyeType="Wink"
+					eyebrowType="Default"
+					mouthType="Serious"
+					skinColor="Light"
+					css={{ width: '2rem', height: '2rem' }}
+				/>
+				<br />
+				Load times: 300ms
+				<br />
+				Size: 1kb
+				<br />
+				Tests: PASS
 				<h3>Pattern guidance</h3>
 				<p>
 					Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore

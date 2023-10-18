@@ -19,6 +19,7 @@
 		"@babel/runtime": "7.19.0",
 		"@emotion/babel-plugin": "11.10.2",
 		"@emotion/react": "11.10.4",
+		"avataaars": "^2.0.0",
 		"next": "12.3.0",
 		"react": "18.2.0",
 		"react-dom": "18.2.0"
